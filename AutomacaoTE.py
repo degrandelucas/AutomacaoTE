@@ -33,7 +33,7 @@ pyautogui.PAUSE = 1
     # pyautogui.write("logistica@bmchyundai.com.br")
     # pyautogui.press("tab") # passando pro próximo campo
     # # escrever o senha
-    # pyautogui.write("123")
+    # pyautogui.write("***")
     # pyautogui.press("tab") # passando pro próximo campo
     # pyautogui.press("enter") # confirmando para entrar
     # time.sleep(3)

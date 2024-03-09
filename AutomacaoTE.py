@@ -11,7 +11,7 @@ import time
 
 # -----------------------------------------------------------------------------------------------------------------------------
 
-pyautogui.PAUSE = 1
+pyautogui.PAUSE = 1  
 
     # # abrir o navegador (chrome)
     # pyautogui.press("win")
@@ -26,6 +26,7 @@ pyautogui.PAUSE = 1
 
     # # Passo 2: Fazer login e acessar o painel da logística
     # # selecionar o campo da loja
+    
     # pyautogui.click(x=833, y=413)   
     # pyautogui.write("229")
     # pyautogui.press("tab")
@@ -33,15 +34,17 @@ pyautogui.PAUSE = 1
     # pyautogui.write("logistica@bmchyundai.com.br")
     # pyautogui.press("tab") # passando pro próximo campo
     # # escrever o senha
-    # pyautogui.write("***")
+    # pyautogui.write("123")
     # pyautogui.press("tab") # passando pro próximo campo
     # pyautogui.press("enter") # confirmando para entrar
     # time.sleep(3)
     # pyautogui.scroll(-200)
     # pyautogui.click(x=131, y=697)
+    
     # pyautogui.scroll(-300)
     # pyautogui.click(x=145, y=700)
     # pyautogui.click(x=1239, y=418)
+    
     # pyautogui.click(x=1236, y=478)
     # pyautogui.click(x=587, y=490)
     # pyautogui.click(x=550, y=554)
@@ -75,7 +78,9 @@ for CadaLinha, row in planilha.iterrows():
         pyautogui.hotkey('ctrl', 'f')
         pyautogui.write(str(Nota))
         pyautogui.press("enter") 
-        pyautogui.click(x=1130, y=104)
+        pyautogui.press("tab") 
+        pyautogui.press("tab") 
+        pyautogui.press("tab") 
         pyautogui.press("enter")
         pyautogui.press("tab") 
         pyautogui.press("enter")
@@ -83,22 +88,26 @@ for CadaLinha, row in planilha.iterrows():
         pyautogui.write(str(DataEntrega))
         pyautogui.press("tab") 
         pyautogui.press("enter")
+        pyautogui.sleep(2)
         pyautogui.press("enter")
-        print(DataEntrega)
-        
+        print(DataEntrega)    
     else:
         Nota = planilha.loc[CadaLinha, "NOTA"]
         pyautogui.hotkey('ctrl', 'f')
         pyautogui.write(str(Nota))
-        pyautogui.press("enter") 
-        pyautogui.click(x=1125, y=107)
+        pyautogui.press("enter")    
+        pyautogui.press("tab") 
+        pyautogui.press("tab") 
+        pyautogui.press("tab") 
+        pyautogui.press("enter")
         pyautogui.press("enter")
         pyautogui.press("tab") 
         pyautogui.press("tab") 
         pyautogui.hotkey('Shift', 'F10')
         pyautogui.press("down") 
-        pyautogui.press("enter") 
-        pyautogui.click(x=398, y=18)
+        
+        pyautogui.press("enter")        
+        pyautogui.hotkey('ctrl', 'tab')
         
         #pyautogui para selecionar o campo "Outros"
         pyautogui.click(x=804, y=517)
@@ -106,13 +115,16 @@ for CadaLinha, row in planilha.iterrows():
         
         #pyautogui para selecionar a data de hoje
         pyautogui.click(x=1209, y=518)
-        pyautogui.click(x=1084, y=472)
+        pyautogui.press("tab") 
+        pyautogui.press("tab") 
+        pyautogui.press("enter")
         
         #pyautogui para selecionar o campo de observação
         pyautogui.click(x=528, y=711)
         pyautogui.write(str(Observacao))
         
         #pyautogui para confirmar a informação inserida
+        pyautogui.sleep(1)
         pyautogui.press("tab") 
         pyautogui.press("enter")
         pyautogui.click(x=853, y=189)

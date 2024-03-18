@@ -58,7 +58,7 @@ pyautogui.PAUSE = 1
 import pandas as pd
 
 planilha = pd.read_excel("PlataformaTE.xlsx")
-colunas_para_deletar = ['Cliente DOC','Cidade','UF','Ocorrencia','DATA','1º Data PENSKE','TE','Mínimo','Máximo','Sinal','NOTA.1','14.168.536/0001-25','14168536000125']
+colunas_para_deletar = ['Cliente DOC','Cidade','UF','Vendedor','Ocorrencia','DATA','1º Data PENSKE','TE','Mínimo','Máximo','Sinal','NOTA.1','14.168.536/0001-25','14168536000125']
 planilha = planilha.drop(columns=colunas_para_deletar)
 planilha['DATA ENTREGA'] = pd.to_datetime(planilha['DATA ENTREGA']).dt.strftime('%d/%m/%Y')
 print(planilha)
